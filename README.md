@@ -3,6 +3,17 @@
  - 通过1个压缩包搭建数蛙工业物联网Saas平台开发环境
  - 通过1个脚本搭建linux下数蛙物联互联网Saas平台运行环境
  - 通过2个安装包搭建windows下数蛙物联互联网Saas平台运行环境
+
+ 
+# 开发环境压缩包
+   [ 数蛙物联网Saas平台开发套件](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_develop_tools.zip)，点击下载，开箱即用，快速代入，商用实战
+  - windows下的linux开发调测环境
+  - git持续集成环境
+  - erlang通道插件开发与调测环境
+  - python扩展编程开发与调测环境
+  - java扩展编程开发与调测环境
+  - nodjs+vue+yark前端交互开发与调测环境
+
  
  后台开发代码工程：
  
@@ -14,15 +25,6 @@
  ```
  git clone https://hub.fastgit.org/dgiot/dgiot_dashboard.git
  ```
- 
-# 开发环境压缩包
-   [ 数蛙物联网Saas平台开发套件](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_develop_tools.zip)，点击下载，开箱即用，快速代入，商用实战
-  - windows下的linux开发调测环境
-  - git持续集成环境
-  - erlang通道插件开发与调测环境
-  - python扩展编程开发与调测环境
-  - java扩展编程开发与调测环境
-  - nodjs+vue+yark前端交互开发与调测环境
   
 # linux环境一键式部署脚本
 部署在工业物联网解决方案的云服务商公网节点，支持设备租赁、设备托管等物联网需求
