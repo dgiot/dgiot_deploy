@@ -13,14 +13,14 @@
   - nodjs+vue+yark运行与运行环境
   
 # linux环境一键式部署脚本
-部署在工业物联网解决方案的云节点，支持设备租赁、设备托管等物联网需求
+部署在工业物联网解决方案的公网云服务商节点，支持设备租赁、设备托管等物联网需求
 | 名称 | 下载地址 | 说明   |
 | ------------ | ------------ | ------------ |
 |  数蛙云平台单机脚本 |  [dgiot_cloud_single.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_cloud_single.zip) |  包含数据、存储、接入与计算套件 |
 |  数蛙云平台集群脚本 |  dgiot_cloud_cluster |  包含数据、存储、接入与计算套件|
 
 # windows环境安装包
-部署在企业与工程内网现有的window电脑上、可以零投入实现PLC、OPC、视频监控、设备接入、数据治理等企业内部需求
+部署工业物联网解决方案的企业内网安全私密的window电脑节点、零投入实现PLC、OPC、视频监控、设备接入、数据治理等企业内部安全数字化转型需求
  | 名称 | 下载地址 | 说明   |
 | ------------ | ------------ | ------------ |
 |  数蛙边缘数据安装包 |  [dgiot_data_center.exe](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_data_center.exe) |  包含数据和存储套件 |
