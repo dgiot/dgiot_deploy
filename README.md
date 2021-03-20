@@ -6,11 +6,14 @@
  
  后台开发代码工程：
  
- ···
+ ```
  git clone https://hub.fastgit.org/dgiot/dgiot_server.git
- ···
+ ```
  
  前端源码：
+ ```
+ git clone https://hub.fastgit.org/dgiot/dgiot_dashboard.git
+ ```
  
 # 开发环境压缩包
    [ 数蛙物联网Saas平台开发套件](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_develop_tools.zip)，点击下载，开箱即用，快速代入，商用实战
