@@ -7,11 +7,11 @@
 # 开发环境压缩包
    [ 数蛙物联网Saas平台开发套件](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_develop_tools.zip)，点击下载，开箱即用，无需配置可以进行工业物联网前后端开发
   - windows下的linux开发调测环境
-  - erlang运行与开发环境
   - git持续集成环境
-  - python扩展编程运行与开发环境
-  - java扩展编程运行与开发环境
-  - nodjs+vue+yark运行与运行环境
+  - erlang通道插件开发与调测环境
+  - python扩展编程开发与调测环境
+  - java扩展编程开发与调测环境
+  - nodjs+vue+yark前端交互开发与调测环境
   
 # linux环境一键式部署脚本
 部署在工业物联网解决方案的公网云服务商节点，支持设备租赁、设备托管等物联网需求
