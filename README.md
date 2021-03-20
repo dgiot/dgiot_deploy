@@ -33,9 +33,10 @@
 |  数蛙云平台单机脚本 |  [dgiot_cloud_single.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_cloud_single.zip) |  包含数据、存储、接入与计算套件 |
 |  数蛙云平台集群脚本 |  dgiot_cloud_cluster |  包含数据、存储、接入与计算套件|
 
-# windows环境安装包d
+# windows环境安装包
 部署工业物联网解决方案的企业内网安全私密的window电脑节点、零投入实现企业内部安全的设备接入与数字化转型需求
  | 名称 | 下载地址 | 说明   |
 | ------------ | ------------ | ------------ |
 |  数蛙边缘数据安装包 |  [dgiot_data_center.exe](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_data_center.exe) |  包含数据和存储套件 |
 |  数蛙边缘计算安装包 |  [dgiot_edge_hub.exe](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_edge_hub.exe) |  包含接入和计算套件 |
+
