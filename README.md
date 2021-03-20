@@ -3,7 +3,15 @@
  - 通过1个压缩包搭建数蛙工业物联网Saas平台开发环境
  - 通过1个脚本搭建linux下数蛙物联互联网Saas平台运行环境
  - 通过2个安装包搭建windows下数蛙物联互联网Saas平台运行环境
-
+ 
+ 后台开发代码工程：
+ 
+ ···
+ git clone https://hub.fastgit.org/dgiot/dgiot_server.git
+ ···
+ 
+ 前端源码：
+ 
 # 开发环境压缩包
    [ 数蛙物联网Saas平台开发套件](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_develop_tools.zip)，点击下载，开箱即用，快速代入，商用实战
   - windows下的linux开发调测环境
