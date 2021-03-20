@@ -14,7 +14,7 @@
   - nodjs+vue+yark前端交互开发与调测环境
   
 # linux环境一键式部署脚本
-部署在工业物联网解决方案的公网云服务商节点，支持设备租赁、设备托管等物联网需求
+部署在工业物联网解决方案的云服务商公网节点，支持设备租赁、设备托管等物联网需求
 | 名称 | 下载地址 | 说明   |
 | ------------ | ------------ | ------------ |
 |  数蛙云平台单机脚本 |  [dgiot_cloud_single.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_cloud_single.zip) |  包含数据、存储、接入与计算套件 |
