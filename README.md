@@ -5,9 +5,9 @@
  - 通过2个安装包搭建windows下数蛙物联互联网Saas平台运行环境
 
 # 开发环境压缩包
-  msys64开发环境，下载开箱即用，无需配置可以进行工业物联网前后端开发
+  数蛙物联网Saas平台开发环境，下载开箱即用，无需配置可以进行工业物联网前后端开发
   
-  [msys64.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/msys64.zip)
+ [dgiot_develop_tools.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_develop_tools.zip)
   
   - erlang运行与开发环境
   - git持续集成环境
