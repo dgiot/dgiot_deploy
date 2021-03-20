@@ -9,7 +9,8 @@
   - windows下的linux开发调测环境
   - erlang运行与开发环境
   - git持续集成环境
-  - python运行与开发环境
+  - python扩展编程运行与开发环境
+  - java扩展编程运行与开发环境
   - nodjs+vue+yark运行与运行环境
   
 # linux环境一键式部署脚本
