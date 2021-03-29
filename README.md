@@ -54,7 +54,7 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  sed -i "s/{{dgiot}}/shuwa_iot_suke_39/g" ./dgiot_cloud_single.sh
  sudo sh ./dgiot_cloud_single.sh
  ```
-安装好之后，可以打开http://123.45.67.89:5080登陆物联网系统
+安装好之后，可以打开 http://123.45.67.89:5080 登陆物联网系统
 
 # windows环境安装包
 部署工业物联网解决方案的企业内网安全私密的window电脑节点、零投入实现企业内部安全的设备接入与数字化转型需求
