@@ -33,6 +33,7 @@
 |  数蛙云平台单机脚本 |  dgiot_cloud_single.zip |  包含数据、存储、接入与计算套件 |
 |  数蛙云平台集群脚本 |  dgiot_cloud_cluster |  包含数据、存储、接入与计算套件|
 
+## centos 7.6 
  数蛙云平台单机脚本部署
  dgiot_cloud_single.sh
  + 替换公网ip(wlanip),如公网ip为123.45.67.89,则替换命令为
@@ -45,7 +46,7 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  sed -i "s/{{dgiot}}/shuwa_iot_suke_39/g" ./dgiot_cloud_single.sh
   ```
 
-centos 7.6环境下完整的操作命令为：
+环境下完整的操作命令为：
 ```shell script
  git clone https://hub.fastgit.org/dgiot/dgiot_deploy.git
  cd dgiot_deploy
