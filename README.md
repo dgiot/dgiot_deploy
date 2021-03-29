@@ -30,8 +30,30 @@
 部署在工业物联网解决方案的云服务商公网节点，支持设备租赁、设备托管等物联网需求
 | 名称 | 下载地址 | 说明   |
 | ------------ | ------------ | ------------ |
-|  数蛙云平台单机脚本 |  [dgiot_cloud_single.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot/deploy/dgiot_cloud_single.zip) |  包含数据、存储、接入与计算套件 |
+|  数蛙云平台单机脚本 |  dgiot_cloud_single.zip |  包含数据、存储、接入与计算套件 |
 |  数蛙云平台集群脚本 |  dgiot_cloud_cluster |  包含数据、存储、接入与计算套件|
+
+ 数蛙云平台单机脚本部署
+ dgiot_cloud_single.sh
+ + 替换公网ip(wlanip),如公网ip为123.45.67.89,则替换命令为
+ ```
+sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
+ ```
+ + 替换最新版本{{dgiot}},如果最新版本为shuwa_iot_suke_39，则替换命令为
+ 
+ ```
+ sed -i "s/{{dgiot}}/shuwa_iot_suke_39/g" ./dgiot_cloud_single.sh
+  ```
+
+完整的操作命令为：
+```shell script
+ git clone https://hub.fastgit.org/dgiot/dgiot_deploy.git
+ cd dgiot_deploy
+ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
+ sed -i "s/{{dgiot}}/shuwa_iot_suke_39/g" ./dgiot_cloud_single.sh
+ sh ./dgiot_cloud_single.sh
+ ```
+安装好之后，可以打开http://123.45.67.89:5080登陆物联网系统
 
 # windows环境安装包
 部署工业物联网解决方案的企业内网安全私密的window电脑节点、零投入实现企业内部安全的设备接入与数字化转型需求
