@@ -157,10 +157,10 @@ cat > /data/shuwa_parse_server/script/.env << "EOF"
 # 基础配置
 SERVER_NAME = shuwa_parse_server
 SERVER_PORT = 1337
-SERVER_DOMAIN = http://118.31.59.148:1337
-SERVER_PUBLIC = http://118.31.59.148:1337
+SERVER_DOMAIN = http://{{wlanip}}:1337
+SERVER_PUBLIC = http://{{wlanip}}:1337
 SERVER_PATH = /parse
-GRAPHQL_PATH = http://118.31.59.148:1337/graphql
+GRAPHQL_PATH = http://{{wlanip}}:1337/graphql
 
 # 管理配置
 DASHBOARD_PATH = /dashboard
@@ -292,8 +292,8 @@ if [ -d /data/shuwa_iot ]; then
    mv /data/shuwa_iot/ /data/shuwa_iot_bk_$randtime
 fi
 
-wget http://ci.iotn2n.com/shuwa/package/shuwa_iot_suke_24.tar.gz -O /data/shuwa_iot_suke_24.tar.gz
-tar xf shuwa_iot_suke_24.tar.gz
+wget http://ci.iotn2n.com/shuwa/package/{{dgiot}}.tar.gz -O /data/{{dgiot}}.tar.gz
+tar xf {{dgiot}}.tar.gz
 cd  /data/shuwa_iot
 
 count=`ps -ef |grep beam.smp |grep -v "grep" |wc -l`
@@ -315,7 +315,7 @@ sed -i '/^parse.parse_js_key/cparse.parse_js_key = gguWXMv0wpKw4P81IeDbhA9kCOeD9
 sed -i '/^parse.parse_rest_key/cparse.parse_rest_key = vlCXoH6U299cXYirRRFtGi6bJCJIEyLY' /data/shuwa_iot/etc/plugins/shuwa_parse.conf
 
 #修改emq.conf
-sed -i '/^node.name/cnode.name = shuwa_iot@118.31.59.148' /data/shuwa_iot/etc/emqx.conf
+sed -i '/^node.name/cnode.name = shuwa_iot@{{wlanip}}' /data/shuwa_iot/etc/emqx.conf
 mv /data/shuwa_iot/data/loaded_plugins /data/shuwa_iot/data/loaded_plugins_bk
 cat > /data/shuwa_iot/data/loaded_plugins << "EOF"
 {emqx_management, true}.
