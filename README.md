@@ -48,6 +48,7 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
 
 环境下完整的操作命令为：
 ```shell script
+ sudo yum install git
  git clone https://hub.fastgit.org/dgiot/dgiot_deploy.git
  cd dgiot_deploy
  sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
