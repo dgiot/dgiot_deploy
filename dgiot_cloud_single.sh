@@ -249,14 +249,14 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/parse_4.0.sql.tar.gz -O /home/postgres/parse.tar.gz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/parse_4.0.sql.tar.gz -O /home/postgres/parse_4.0.sql.tar.gz
 cd /home/postgres/
-tar xvf parse.tar.gz
+tar xvf parse_4.0.sql.tar.gz
 
 psql -U postgres -c "ALTER USER postgres WITH PASSWORD 'CU8GtM6QEMjnSkJnDAaJEztdL_vlmc41';"
 psql -U postgres -c "CREATE USER  repl WITH PASSWORD 'CU8GtM6QEMjnSkJnDAaJEztdL_vlmc41' REPLICATION;"
 psql -U postgres -c "CREATE DATABASE parse;"
-psql -U postgres -f ./parse.sql  parse
+psql -U postgres -f ./parse_4.0.sql  parse
 
 systemctl daemon-reload
 systemctl enable shuwa_parse_server
