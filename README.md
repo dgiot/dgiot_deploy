@@ -40,7 +40,7 @@
  ```
 sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  ```
- + 替换最新版本{{dgiot}},如果最新版本为shuwa_iot_suke_39，则替换命令为
+ + 替换最新版本{{dgiot}},如果最新版本为shuwa_iot_suke_40，则替换命令为
  
  ```
  sed -i "s/{{dgiot}}/shuwa_iot_suke_40/g" ./dgiot_cloud_single.sh
