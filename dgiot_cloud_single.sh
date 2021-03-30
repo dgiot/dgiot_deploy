@@ -292,7 +292,7 @@ if [ -d /data/shuwa_iot ]; then
    mv /data/shuwa_iot/ /data/shuwa_iot_bk_$randtime
 fi
 
-wget http://ci.iotn2n.com/shuwa/package/{{dgiot}}.tar.gz -O /data/{{dgiot}}.tar.gz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/{{dgiot}}.tar.gz -O /data/{{dgiot}}.tar.gz
 tar xf {{dgiot}}.tar.gz
 cd  /data/shuwa_iot
 
