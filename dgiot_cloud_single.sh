@@ -424,7 +424,7 @@ yum install -y wget curl zlib-devel bzip2-devel openssl-devel ncurses-devel sqli
 # 2、下载包
 wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/Python-3.8.0.tgz
 # 3、解压
-tar -zxvf Python-3.8.0.tgz
+tar -xvf Python-3.8.0.tgz
 # 4、安装
 cd Python-3.8.0
 ./configure --prefix=/usr/local/python3
