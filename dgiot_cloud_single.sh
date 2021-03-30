@@ -49,7 +49,7 @@ source /etc/profile.d/pgsql.sh
 yum install -y wget git gcc gcc-c++  epel-release llvm5.0 llvm5.0-devel clang libicu-devel perl-ExtUtils-Embed readline readline-devel zlib zlib-devel openssl openssl-devel pam-devel libxml2-devel libxslt-devel openldap-devel systemd-devel tcl-devel python-devel
 
 if [ ! -f /tmp/postgresql-12.0.tar.gz ]; then
-   wget http://ci.iotn2n.com/shuwa/oem/postgresql-12.0.tar.gz -O /tmp/postgresql-12.0.tar.gz
+   wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/postgresql-12.0.tar.gz -O /tmp/postgresql-12.0.tar.gz
 fi
 
 cd /tmp
@@ -148,7 +148,7 @@ sleep 10
 
 #4. 安装parse server
 if [ ! -f /data/shuwa_parse_server_4.0.tar.gz ]; then
-   wget http://ci.iotn2n.com/shuwa/oem/shuwa_parse_server_4.0.tar.gz -O /data/shuwa_parse_server_4.0.tar.gz
+   wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/shuwa_parse_server_4.0.tar.gz -O /data/shuwa_parse_server_4.0.tar.gz
 fi
 cd /data/
 tar xf shuwa_parse_server_4.0.tar.gz
@@ -249,7 +249,7 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 
-wget http://ci.iotn2n.com/shuwa/oem/data/parse.tar.gz -O /home/postgres/parse.tar.gz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/parse_4.0.sql.tar.gz -O /home/postgres/parse.tar.gz
 cd /home/postgres/
 tar xvf parse.tar.gz
 
@@ -422,7 +422,7 @@ systemctl start dgiot_td_server
 # 1、依赖包安装
 yum install -y wget curl zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
 # 2、下载包
-wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/Python-3.8.0.tgz
 # 3、解压
 tar -zxvf Python-3.8.0.tgz
 # 4、安装
