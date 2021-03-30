@@ -51,7 +51,7 @@ sed -i "s/{{wlanip}}/114.117.171.233/g" ./dgiot_cloud_single.sh
  sudo yum install git
  git clone https://hub.fastgit.org/dgiot/dgiot_deploy.git
  cd dgiot_deploy
- sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
+ sed -i "s/{{wlanip}}/114.117.171.233/g" ./dgiot_cloud_single.sh
  sed -i "s/{{dgiot}}/shuwa_iot_suke_39/g" ./dgiot_cloud_single.sh
  sudo sh ./dgiot_cloud_single.sh
  ```
