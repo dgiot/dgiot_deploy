@@ -43,7 +43,7 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  + 替换最新版本{{dgiot}},如果最新版本为shuwa_iot_suke_39，则替换命令为
  
  ```
- sed -i "s/{{dgiot}}/shuwa_iot_suke_39/g" ./dgiot_cloud_single.sh
+ sed -i "s/{{dgiot}}/shuwa_iot_suke_40/g" ./dgiot_cloud_single.sh
   ```
 
 环境下完整的操作命令为：
@@ -52,7 +52,7 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  git clone https://hub.fastgit.org/dgiot/dgiot_deploy.git
  cd dgiot_deploy
  sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
- sed -i "s/{{dgiot}}/shuwa_iot_suke_39/g" ./dgiot_cloud_single.sh
+ sed -i "s/{{dgiot}}/shuwa_iot_suke_40/g" ./dgiot_cloud_single.sh
  sudo sh ./dgiot_cloud_single.sh
  ```
 安装好之后，可以打开 http://123.45.67.89:5080 用户名:dgiot_admin  密码：dgiot_admin  登陆物联网系统
