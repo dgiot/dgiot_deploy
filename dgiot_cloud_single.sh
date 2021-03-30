@@ -371,7 +371,7 @@ sleep 15
 #4. 安装td server
 #setup mosquitto
 rm mosquitto* -rf
-wget http://ci.iotn2n.com/shuwa/oem/mosquitto-1.6.7.tar.gz -O /tmp/mosquitto-1.6.7.tar.gz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/mosquitto-1.6.7.tar.gz -O /tmp/mosquitto-1.6.7.tar.gz
 cd /tmp
 tar xvf mosquitto-1.6.7.tar.gz
 cd  mosquitto-1.6.7
