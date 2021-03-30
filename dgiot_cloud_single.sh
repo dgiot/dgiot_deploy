@@ -267,7 +267,7 @@ systemctl start shuwa_parse_server
 yum install -y make gcc gcc-c++ kernel-devel m4 ncurses-devel openssl-devel libstdc++-devel ncurses-devel openssl-devel unixODBC unixODBC-devel libtool-ltdl libtool-ltdl-devel
 
 if [ ! -f /tmp/otp_src_21.3.tar.gz ]; then
-  wget http://ci.iotn2n.com/shuwa/oem/otp_src_21.3.tar.gz -O /tmp/otp_src_21.3.tar.gz
+  wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/otp_src_21.3.tar.gz -O /tmp/otp_src_21.3.tar.gz
 fi
 
 cd /tmp/
@@ -393,7 +393,7 @@ ldconfig
 rm /tmp/TDengine-server-2.0.16.0 -rf
 
 #下载dgiot_td_server桥接服务
-wget http://ci.iotn2n.com/shuwa/oem/dgiot_td_server  -O /usr/sbin/dgiot_td_server
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/dgiot_td_server  -O /usr/sbin/dgiot_td_server
 systemctl stop dgiot_td_server
 rm /usr/lib/systemd/system/dgiot_td_server.service  -rf
 cat > /lib/systemd/system/dgiot_td_server.service << "EOF"
