@@ -22,6 +22,7 @@
  git clone https://hub.fastgit.org/dgiot/dgiot_server.git
  cd dgiot_server
  make
+ _build/dgiot/rel/emqx/bin/emqx.cmd console
  ```
  
  前端源码：
