@@ -24,6 +24,9 @@
  前端源码：
  ```
  git clone https://hub.fastgit.org/dgiot/dgiot_dashboard.git
+ yarn install
+ yarn dev
+ yarn build
  ```
   
 # linux环境一键式部署脚本
