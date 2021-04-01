@@ -54,6 +54,7 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  sed -i "s/{{dgiot}}/shuwa_iot_suke_40/g" ./dgiot_cloud_single.sh
  sudo sh ./dgiot_cloud_single.sh
+ ps aux|grep emqx
  ```
 安装好之后，可以打开 http://123.45.67.89:5080 用户名:dgiot_admin  密码：dgiot_admin  登陆物联网系统
 
