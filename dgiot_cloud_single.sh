@@ -350,7 +350,7 @@ Type=forking
 Environment=HOME=/data/shuwa_iot/erts-10.3
 ExecStart=/bin/sh /data/shuwa_iot/bin/emqx start
 LimitNOFILE=1048576
-ExecStop=/bin/sh data/shuwa_iot/bin/emqx stop
+ExecStop=/bin/sh /data/shuwa_iot/bin/emqx stop
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=mixed
 KillSignal=SIGINT
