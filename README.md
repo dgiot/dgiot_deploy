@@ -19,11 +19,14 @@
  
  ```
  git clone https://hub.fastgit.org/dgiot/dgiot_server.git
+ cd dgiot_server
+ make
  ```
  
  前端源码：
  ```
  git clone https://hub.fastgit.org/dgiot/dgiot_dashboard.git
+ cd dgiot_dashboard
  yarn install
  yarn dev
  yarn build
