@@ -15,7 +15,10 @@
   - nodjs+vue+yark前端交互开发与调测环境
 
  **请解压到D盘**  目录结构为D:\msys64
+ ## 腾讯云下载工程
+ [dgiot_server.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip)
  
+ ## github下载工程
  后台开发代码工程：
  
  ```
