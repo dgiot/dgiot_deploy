@@ -18,6 +18,14 @@
  ## 腾讯云下载工程
  [dgiot_server.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip)
  
+ ```
+ wge http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip
+ unzip dgiot_server.zip
+ cd dgiot_server
+ make
+ _build/dgiot/rel/emqx/bin/emqx.cmd console
+ ```
+ 
  ## github下载工程
  后台开发代码工程：
  
