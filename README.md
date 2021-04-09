@@ -19,7 +19,7 @@
  [dgiot_server.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip)
  
  ```
- wge http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip
+ wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip
  unzip dgiot_server.zip
  cd dgiot_server
  make
