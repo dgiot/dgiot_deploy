@@ -15,12 +15,22 @@
   - nodjs+vue+yark前端交互开发与调测环境
 
  **请解压到D盘**  目录结构为D:\msys64
- ## 腾讯云下载工程
- [dgiot_server.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip)
+ ## window开发环境
+ [dgiot_server.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/windows/dgiot_server_v4.0.0.tar.gz)
  
  ```
- wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_server.zip
- unzip dgiot_server.zip
+ wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/windows/dgiot_server_v4.0.0.tar.gz
+ tar xvf dgiot_server.zip
+ cd dgiot_server
+ make
+ _build/dgiot/rel/emqx/bin/emqx.cmd console
+ ```
+ ## centos 7.6 开发环境
+  [dgiot_server.zip](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/linux/dgiot_server_v4.0.0.tar.gz)
+ 
+ ```
+ wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/linux/dgiot_server_v4.0.0.tar.gz
+ tar xvf dgiot_server.zip
  cd dgiot_server
  make
  _build/dgiot/rel/emqx/bin/emqx.cmd console
