@@ -385,7 +385,7 @@ rm mosquitto*  -rf
 
 #setup tdengine server
 cd /tmp
-wget http://ci.iotn2n.com/shuwa/oem/TDengine-server-2.0.16.0-Linux-x64.tar.gz -O /tmp/TDengine-server-2.0.16.0-Linux-x64.tar.gz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/TDengine-server-2.0.16.0-Linux-x64.tar.gz -O /tmp/TDengine-server-2.0.16.0-Linux-x64.tar.gz
 tar xf TDengine-server-2.0.16.0-Linux-x64.tar.gz
 cd /tmp/TDengine-server-2.0.16.0/
 /bin/sh install.sh
