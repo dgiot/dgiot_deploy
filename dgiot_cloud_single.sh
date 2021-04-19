@@ -192,8 +192,6 @@ KEY_WEBHOOK = pOb64g91WWPtc1AOrf6UN0AFEDDnoA9K
 SESSION_LENGTH = 604800
 EOF
 
-sed -i '/^# defaultPass/cdefaultPass           W41S0rnstbnPawdLMhF9clTHjL89tEvQ' /etc/taos/taos.cfg
-
 cd /data/shuwa_parse_server/
 cd /data/shuwa_parse_server/script/redis/
 make
