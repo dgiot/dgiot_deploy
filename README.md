@@ -12,7 +12,7 @@
   - erlang通道插件开发与调测环境
   - python扩展编程开发与调测环境
   - java扩展编程开发与调测环境
-  - nodjs+vue+yark前端交互开发与调测环境
+  - nodjs+vue+yarn前端交互开发与调测环境
 
  **请解压到D盘**  目录结构为D:\msys64
  ## window开发环境
