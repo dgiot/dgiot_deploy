@@ -49,7 +49,7 @@ source /etc/profile.d/pgsql.sh
 yum install -y wget git gcc gcc-c++  epel-release llvm5.0 llvm5.0-devel clang libicu-devel perl-ExtUtils-Embed readline readline-devel zlib zlib-devel openssl openssl-devel pam-devel libxml2-devel libxslt-devel openldap-devel systemd-devel tcl-devel python-devel
 
 if [ ! -f /tmp/postgresql-12.0.tar.gz ]; then
-   wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/postgresql-12.0.tar.gz -O /tmp/postgresql-12.0.tar.gz
+   wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/postgresql-12.0.tar.gz -O /tmp/postgresql-12.0.tar.gz
 fi
 
 cd /tmp
@@ -148,7 +148,7 @@ sleep 10
 
 #4. 安装parse server
 if [ ! -f /data/shuwa_parse_server_4.0.tar.gz ]; then
-   wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/shuwa_parse_server_4.0.tar.gz -O /data/shuwa_parse_server_4.0.tar.gz
+   wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/shuwa_parse_server_4.0.tar.gz -O /data/shuwa_parse_server_4.0.tar.gz
 fi
 cd /data/
 tar xf shuwa_parse_server_4.0.tar.gz
@@ -247,7 +247,7 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/parse_4.0.sql.tar.gz -O /home/postgres/parse_4.0.sql.tar.gz
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/parse_4.0.sql.tar.gz -O /home/postgres/parse_4.0.sql.tar.gz
 cd /home/postgres/
 tar xvf parse_4.0.sql.tar.gz
 
@@ -265,7 +265,7 @@ systemctl start shuwa_parse_server
 yum install -y make gcc gcc-c++ kernel-devel m4 ncurses-devel openssl-devel libstdc++-devel ncurses-devel openssl-devel unixODBC unixODBC-devel libtool-ltdl libtool-ltdl-devel
 
 if [ ! -f /tmp/otp_src_21.3.tar.gz ]; then
-  wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/otp_src_21.3.tar.gz -O /tmp/otp_src_21.3.tar.gz
+  wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/otp_src_21.3.tar.gz -O /tmp/otp_src_21.3.tar.gz
 fi
 
 cd /tmp/
@@ -290,7 +290,7 @@ if [ -d /data/shuwa_iot ]; then
    mv /data/shuwa_iot/ /data/shuwa_iot_bk_$randtime
 fi
 
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/{{dgiot}}.tar.gz -O /data/{{dgiot}}.tar.gz
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/{{dgiot}}.tar.gz -O /data/{{dgiot}}.tar.gz
 tar xf {{dgiot}}.tar.gz
 cd  /data/shuwa_iot
 
@@ -369,7 +369,7 @@ sleep 15
 #4. 安装td server
 #setup mosquitto
 rm mosquitto* -rf
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/mosquitto-1.6.7.tar.gz -O /tmp/mosquitto-1.6.7.tar.gz
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/mosquitto-1.6.7.tar.gz -O /tmp/mosquitto-1.6.7.tar.gz
 cd /tmp
 tar xvf mosquitto-1.6.7.tar.gz
 cd  mosquitto-1.6.7
@@ -383,7 +383,7 @@ rm mosquitto*  -rf
 
 #setup tdengine server
 cd /tmp
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/TDengine-server-2.0.16.0-Linux-x64.tar.gz -O /tmp/TDengine-server-2.0.16.0-Linux-x64.tar.gz
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/TDengine-server-2.0.16.0-Linux-x64.tar.gz -O /tmp/TDengine-server-2.0.16.0-Linux-x64.tar.gz
 tar xf TDengine-server-2.0.16.0-Linux-x64.tar.gz
 cd /tmp/TDengine-server-2.0.16.0/
 /bin/sh install.sh
@@ -391,7 +391,7 @@ ldconfig
 rm /tmp/TDengine-server-2.0.16.0 -rf
 
 #下载dgiot_td_server桥接服务
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/dgiot_td_server  -O /usr/sbin/dgiot_td_server
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/dgiot_td_server  -O /usr/sbin/dgiot_td_server
 systemctl stop dgiot_td_server
 rm /usr/lib/systemd/system/dgiot_td_server.service  -rf
 cat > /lib/systemd/system/dgiot_td_server.service << "EOF"
@@ -420,7 +420,7 @@ systemctl start dgiot_td_server
 # 1、依赖包安装
 yum install -y wget curl zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
 # 2、下载包
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/Python-3.8.0.tgz
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/Python-3.8.0.tgz
 # 3、解压
 tar -xvf Python-3.8.0.tgz
 # 4、安装
