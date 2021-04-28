@@ -331,7 +331,6 @@ cat > /data/shuwa_iot/data/loaded_plugins << "EOF"
 {shuwa_parse, true}.
 {shuwa_web_manager,true}.
 {shuwa_bridge,true}.
-{shuwa_suke,true}.
 EOF
 
 
