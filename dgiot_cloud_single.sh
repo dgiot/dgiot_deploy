@@ -422,6 +422,9 @@ sleep 10
 yum install -y wget curl zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
 # 2、下载包
 wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/Python-3.8.0.tgz
+
+sleep 20
+
 # 3、解压
 tar -xvf Python-3.8.0.tgz
 # 4、安装
