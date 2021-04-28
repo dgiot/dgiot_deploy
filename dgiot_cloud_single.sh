@@ -415,6 +415,8 @@ systemctl daemon-reload
 systemctl enable dgiot_td_server
 systemctl start dgiot_td_server
 
+sleep 10
+
 # 安装python3.8
 # 1、依赖包安装
 yum install -y wget curl zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
