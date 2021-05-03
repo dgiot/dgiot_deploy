@@ -386,7 +386,7 @@ cd /tmp
 wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/TDengine-server-2.0.16.0-Linux-x64.tar.gz -O /tmp/TDengine-server-2.0.16.0-Linux-x64.tar.gz
 tar xf TDengine-server-2.0.16.0-Linux-x64.tar.gz
 cd /tmp/TDengine-server-2.0.16.0/
-/bin/sh install.sh
+echo | /bin/sh install.sh
 ldconfig
 rm /tmp/TDengine-server-2.0.16.0 -rf
 
