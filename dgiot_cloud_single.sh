@@ -286,8 +286,8 @@ cd /data
 randtime=`date +%F_%T`
 echo $randtime
 
-if [ -d /data/shuwa_iot ]; then
-   mv /data/shuwa_iot/ /data/shuwa_iot_bk_$randtime
+if [ -d /data/dgiot ]; then
+   mv /data/dgiot/ /data/dgiot_bk_$randtime
 fi
 
 wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/{{dgiot}}.tar.gz -O /data/{{dgiot}}.tar.gz
@@ -302,20 +302,20 @@ if [ 0 == $count ];then
 fi
 
 #配置license
-sed -i '/^shuwa_auth.license/cshuwa_auth.license = ee7982020f18070e860b6468ec27e2b6' /data/shuwa_iot/etc/plugins/shuwa_license.conf
+sed -i '/^shuwa_auth.license/cshuwa_auth.license = ee7982020f18070e860b6468ec27e2b6' /data/dgiot/etc/plugins/shuwa_license.conf
 
 #parse 连接 配置
-sed -i '/^parse.parse_server/cparse.parse_server = http://127.0.0.1:1337' /data/shuwa_iot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_path/cparse.parse_path = /parse/' /data/shuwa_iot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_appid/cparse.parse_appid = 1uqZbbdd_JMyQ45YLsUzYezMRPerMa80' /data/shuwa_iot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_master_key/cparse.parse_master_key = PADbN7p973quWLngikp6XvrDbL97u_vM' /data/shuwa_iot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_js_key/cparse.parse_js_key = gguWXMv0wpKw4P81IeDbhA9kCOeD9FgY' /data/shuwa_iot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_rest_key/cparse.parse_rest_key = vlCXoH6U299cXYirRRFtGi6bJCJIEyLY' /data/shuwa_iot/etc/plugins/shuwa_parse.conf
+sed -i '/^parse.parse_server/cparse.parse_server = http://127.0.0.1:1337' /data/dgiot/etc/plugins/shuwa_parse.conf
+sed -i '/^parse.parse_path/cparse.parse_path = /parse/' /data/dgiot/etc/plugins/shuwa_parse.conf
+sed -i '/^parse.parse_appid/cparse.parse_appid = 1uqZbbdd_JMyQ45YLsUzYezMRPerMa80' /data/dgiot/etc/plugins/shuwa_parse.conf
+sed -i '/^parse.parse_master_key/cparse.parse_master_key = PADbN7p973quWLngikp6XvrDbL97u_vM' /data/dgiot/etc/plugins/shuwa_parse.conf
+sed -i '/^parse.parse_js_key/cparse.parse_js_key = gguWXMv0wpKw4P81IeDbhA9kCOeD9FgY' /data/dgiot/etc/plugins/shuwa_parse.conf
+sed -i '/^parse.parse_rest_key/cparse.parse_rest_key = vlCXoH6U299cXYirRRFtGi6bJCJIEyLY' /data/dgiot/etc/plugins/shuwa_parse.conf
 
 #修改emq.conf
-sed -i '/^node.name/cnode.name = shuwa_iot@{{wlanip}}' /data/shuwa_iot/etc/emqx.conf
-mv /data/shuwa_iot/data/loaded_plugins /data/shuwa_iot/data/loaded_plugins_bk
-cat > /data/shuwa_iot/data/loaded_plugins << "EOF"
+sed -i '/^node.name/cnode.name = dgiot@{{wlanip}}' /data/dgiot/etc/emqx.conf
+mv /data/dgiot/data/loaded_plugins /data/shuwa_iot/data/loaded_plugins_bk
+cat > /data/dgiot/data/loaded_plugins << "EOF"
 {emqx_management, true}.
 {emqx_recon, true}.
 {emqx_retainer, true}.
@@ -331,6 +331,7 @@ cat > /data/shuwa_iot/data/loaded_plugins << "EOF"
 {shuwa_parse, true}.
 {shuwa_web_manager,true}.
 {shuwa_bridge,true}.
+{dgiot_meter,true}.
 EOF
 
 
@@ -338,16 +339,16 @@ systemctl stop dgiot
 rm /usr/lib/systemd/system/dgiot.service  -rf
 cat > /lib/systemd/system/dgiot.service << "EOF"
 [Unit]
-Description=shuwa_iot_service
+Description=dgiot_service
 After=network.target shuwa_parse_server.service
 Requires=shuwa_parse_server.service
 
 [Service]
 Type=forking
-Environment=HOME=/data/shuwa_iot/erts-10.3
-ExecStart=/bin/sh /data/shuwa_iot/bin/emqx start
+Environment=HOME=/data/dgiot/erts-10.3
+ExecStart=/bin/sh /data/dgiot/bin/emqx start
 LimitNOFILE=1048576
-ExecStop=/bin/sh /data/shuwa_iot/bin/emqx stop
+ExecStop=/bin/sh /data/dgiot/bin/emqx stop
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=mixed
 KillSignal=SIGINT
