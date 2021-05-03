@@ -292,7 +292,7 @@ fi
 
 wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/{{dgiot}}.tar.gz -O /data/{{dgiot}}.tar.gz
 tar xf {{dgiot}}.tar.gz
-cd  /data/shuwa_iot
+cd  /data/dgiot
 
 count=`ps -ef |grep beam.smp |grep -v "grep" |wc -l`
 if [ 0 == $count ];then
@@ -314,7 +314,7 @@ sed -i '/^parse.parse_rest_key/cparse.parse_rest_key = vlCXoH6U299cXYirRRFtGi6bJ
 
 #修改emq.conf
 sed -i '/^node.name/cnode.name = dgiot@{{wlanip}}' /data/dgiot/etc/emqx.conf
-mv /data/dgiot/data/loaded_plugins /data/shuwa_iot/data/loaded_plugins_bk
+mv /data/dgiot/data/loaded_plugins /data/dgiot/data/loaded_plugins_bk
 cat > /data/dgiot/data/loaded_plugins << "EOF"
 {emqx_management, true}.
 {emqx_recon, true}.
