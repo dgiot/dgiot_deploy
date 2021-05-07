@@ -80,8 +80,8 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  sudo yum install -y git
  git clone https://hub.fastgit.org/dgiot/dgiot_deploy.git
  cd dgiot_deploy
- sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
- sed -i "s/{{dgiot}}/dgiot_26/g" ./dgiot_cloud_single.sh
+ <font color=#FF0000> sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh </font>
+ <font color=#FF0000> sed -i "s/{{dgiot}}/dgiot_26/g" ./dgiot_cloud_single.sh </font>
  sudo sh ./dgiot_cloud_single.sh
  ps aux|grep emqx
  ```
