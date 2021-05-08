@@ -69,11 +69,6 @@
  ```
 sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  ```
- + 替换最新版本{{dgiot}},如果最新版本为dgiot_26，则替换命令为
- 
- ```
- sed -i "s/{{dgiot}}/dgiot_26/g" ./dgiot_cloud_single.sh
-  ```
 
 环境下完整的操作命令为：
 ```shell script
@@ -81,7 +76,6 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
  git clone https://hub.fastgit.org/dgiot/dgiot_deploy.git
  cd dgiot_deploy
  sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
- sed -i "s/{{dgiot}}/dgiot_26/g" ./dgiot_cloud_single.sh
  sudo sh ./dgiot_cloud_single.sh
  ps aux|grep emqx
  ```
@@ -93,8 +87,8 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
 命令如下：
 ``` 
 cd /data
-wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_XX.tar.gz
-tar -zxvf dgiot_XX.tar.gz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot.tar.gz
+tar -zxvf dgiot.tar.gz
 systemctl restart dgiot
 ```
 
