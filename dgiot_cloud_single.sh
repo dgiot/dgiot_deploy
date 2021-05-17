@@ -247,7 +247,7 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 
-wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/parse_4.0.sql.tar.gz -O /home/postgres/parse_4.0.sql.tar.gz
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/parse_4.0.sql.tar.gz -O /home/postgres/parse_4.0.sql.tar.gz
 cd /home/postgres/
 tar xvf parse_4.0.sql.tar.gz
 
@@ -422,10 +422,8 @@ sleep 10
 # 1、依赖包安装
 yum install -y wget curl zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
 # 2、下载包
-wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/Python-3.8.0.tgz
-
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/Python-3.8.0.tgz
 sleep 20
-
 # 3、解压
 tar -xvf Python-3.8.0.tgz
 # 4、安装
