@@ -82,11 +82,11 @@ sed -i "s/{{wlanip}}/123.45.67.89/g" ./dgiot_cloud_single.sh
 安装好之后，可以打开 http://123.45.67.89:5080 用户名:dgiot_admin  密码：dgiot_admin  登陆物联网系统
 
 ## 更新版本
-备份 /data/dgiot </br>
-下载最新版本压缩包到 /data 下 </br>
+下载版本压缩包到 /data 下 </br>
 命令如下：
 ``` 
 cd /data
+rm -rf dgiot
 wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot.tar.gz
 tar -zxvf dgiot.tar.gz
 systemctl restart dgiot
