@@ -444,3 +444,11 @@ pip install numpy
 pip install matplotlib
 # 安装pylab
 pip install pylab
+
+# 安装分布式文件服务器
+cd
+wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/fileserver.tar.gz
+tar -zxvf fileserver.tar.gz
+cd fileserver 
+nohup ./file &
+
