@@ -290,7 +290,7 @@ if [ -d /data/dgiot ]; then
    mv /data/dgiot/ /data/dgiot_bk_$randtime
 fi
 
-wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/dgiot_45.tar.gz -O /data/dgiot.tar.gz
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/dgiot_56.tar.gz -O /data/dgiot.tar.gz
 tar xf dgiot.tar.gz
 cd  /data/dgiot
 
