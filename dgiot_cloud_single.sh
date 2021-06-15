@@ -482,5 +482,6 @@ cd
 wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/fileserver.tar.gz
 tar -zxvf fileserver.tar.gz
 cd fileserver 
+chmod 777 file
 nohup ./file &
 
