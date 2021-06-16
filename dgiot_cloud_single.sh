@@ -389,6 +389,7 @@ cd /tmp/TDengine-server-2.0.16.0/
 echo | /bin/sh install.sh
 ldconfig
 rm /tmp/TDengine-server-2.0.16.0 -rf
+systemctl start taosd
 
 #下载dgiot_td_server桥接服务
 wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/dgiot_td_server  -O /usr/sbin/dgiot_td_server
