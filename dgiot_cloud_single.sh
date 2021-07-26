@@ -265,13 +265,13 @@ systemctl start shuwa_parse_server
 yum install -y make gcc gcc-c++ kernel-devel m4 ncurses-devel openssl-devel libstdc++-devel ncurses-devel openssl-devel unixODBC unixODBC-devel libtool-ltdl libtool-ltdl-devel
 
 if [ ! -f /tmp/otp_src_21.3.tar.gz ]; then
-  wget http://dgiot-1253666439.file.myqcloud.com/dgiot4.0/otp_src_21.3.tar.gz -O /tmp/otp_src_21.3.tar.gz
+  wget http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot4.0/otp_src_23.0.tar.gz -O /tmp/otp_src_23.0.tar.gz
 fi
 
 cd /tmp/
-tar xf otp_src_21.3.tar.gz
+tar xf otp_src_23.0.tar.gz
 
-cd /tmp/otp_src_21.3
+cd /tmp/otp_src_23.0
 ./configure
 make uninstall
 make clean
@@ -279,7 +279,7 @@ make -j5
 make install
 
 cd $workdir
-rm /tmp/otp_src_21.3 -rf
+rm /tmp/otp_src_23.0 -rf
 
 #7. 部署shuwa_iot
 cd /data
@@ -290,7 +290,7 @@ if [ -d /data/dgiot ]; then
    mv /data/dgiot/ /data/dgiot_bk_$randtime
 fi
 
-wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/dgiot_68.tar.gz -O /data/dgiot.tar.gz
+wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/dgiot_20.tar.gz -O /data/dgiot.tar.gz
 tar xf dgiot.tar.gz
 cd  /data/dgiot
 
