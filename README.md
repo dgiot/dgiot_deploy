@@ -33,7 +33,7 @@
  tar xvf dgiot_server_v4.0.0.tar.gz
  cd dgiot_server
  make
- _build/dgiot/rel/emqx/bin/emqx.cmd console
+ _build/dgiot/rel/emqx/bin/emqx console
  ```
  
  ## github下载工程
