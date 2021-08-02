@@ -164,7 +164,7 @@ GRAPHQL_PATH = http://{{wlanip}}:1337/graphql
 
 # 管理配置
 DASHBOARD_PATH = /dashboard
-DASHBOARD_USER = shuwa_parse
+DASHBOARD_USER = dgiot_parse
 DASHBOARD_PASS = nDAivfl8Z28czsX4e4n2iFsAs-eqElNV
 
 # 数据配置
@@ -302,36 +302,45 @@ if [ 0 == $count ];then
 fi
 
 #配置license
-sed -i '/^shuwa_auth.license/cshuwa_auth.license = ee7982020f18070e860b6468ec27e2b6' /data/dgiot/etc/plugins/shuwa_license.conf
+sed -i '/^dgiot_auth.license/cdgiot_auth.license = fc2400836d1071f26c7f7e0ebeae3b43a' /data/dgiot/etc/plugins/dgiot_license.conf
 
 #parse 连接 配置
-sed -i '/^parse.parse_server/cparse.parse_server = http://127.0.0.1:1337' /data/dgiot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_path/cparse.parse_path = /parse/' /data/dgiot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_appid/cparse.parse_appid = 1uqZbbdd_JMyQ45YLsUzYezMRPerMa80' /data/dgiot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_master_key/cparse.parse_master_key = PADbN7p973quWLngikp6XvrDbL97u_vM' /data/dgiot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_js_key/cparse.parse_js_key = gguWXMv0wpKw4P81IeDbhA9kCOeD9FgY' /data/dgiot/etc/plugins/shuwa_parse.conf
-sed -i '/^parse.parse_rest_key/cparse.parse_rest_key = vlCXoH6U299cXYirRRFtGi6bJCJIEyLY' /data/dgiot/etc/plugins/shuwa_parse.conf
+sed -i '/^parse.parse_server/cparse.parse_server = http://127.0.0.1:1337' /data/dgiot/etc/plugins/dgiot_parse.conf
+sed -i '/^parse.parse_path/cparse.parse_path = /parse/' /data/dgiot/etc/plugins/dgiot_parse.conf
+sed -i '/^parse.parse_appid/cparse.parse_appid = 1uqZbbdd_JMyQ45YLsUzYezMRPerMa80' /data/dgiot/etc/plugins/dgiot_parse.conf
+sed -i '/^parse.parse_master_key/cparse.parse_master_key = PADbN7p973quWLngikp6XvrDbL97u_vM' /data/dgiot/etc/plugins/dgiot_parse.conf
+sed -i '/^parse.parse_js_key/cparse.parse_js_key = gguWXMv0wpKw4P81IeDbhA9kCOeD9FgY' /data/dgiot/etc/plugins/dgiot_parse.conf
+sed -i '/^parse.parse_rest_key/cparse.parse_rest_key = vlCXoH6U299cXYirRRFtGi6bJCJIEyLY' /data/dgiot/etc/plugins/dgiot_parse.conf
 
 #修改emq.conf
 sed -i '/^node.name/cnode.name = dgiot@{{wlanip}}' /data/dgiot/etc/emqx.conf
 mv /data/dgiot/data/loaded_plugins /data/dgiot/data/loaded_plugins_bk
 cat > /data/dgiot/data/loaded_plugins << "EOF"
 {emqx_management, true}.
+{emqx_dashboard, true}.
+{emqx_modules, false}.
 {emqx_recon, true}.
 {emqx_retainer, true}.
-{emqx_dashboard, true}.
+{emqx_telemetry, true}.
 {emqx_rule_engine, true}.
-{emqx_cube, false}.
-{shuwa_statsd, true}.
-{shuwa_license, true}.
-{shuwa_public, true}.
-{shuwa_mqtt, true}.
-{shuwa_framework, true}.
-{shuwa_device_shadow, true}.
-{shuwa_parse, true}.
-{shuwa_web_manager,true}.
-{shuwa_bridge,true}.
-{dgiot_meter,true}.
+{emqx_bridge_mqtt, false}.
+{dgiot, true}.
+{dgiot_parse, true}.
+{dgiot_api, true}.
+{dgiot_bridge, true}.
+{dgiot_device, true}.
+{dgiot_tdengine, true}.
+{dgiot_task, true}.
+{dgiot_http, true}.
+{dgiot_evidence, true}.
+{dgiot_license, true}.
+{dgiot_topo, true}.
+{dgiot_opc, true}.
+{dgiot_meter, true}.
+{dgiot_matlab, true}.
+{dgiot_niisten, true}.
+{dgiot_modbus, true}.
+{dgiot_group, true}.
 EOF
 
 
