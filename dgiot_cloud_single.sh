@@ -345,7 +345,7 @@ Requires=shuwa_parse_server.service
 
 [Service]
 Type=forking
-Environment=HOME=/data/dgiot/erts-10.3
+Environment=HOME=/data/dgiot/erts-11.0
 ExecStart=/bin/sh /data/dgiot/bin/emqx start
 LimitNOFILE=1048576
 ExecStop=/bin/sh /data/dgiot/bin/emqx stop
