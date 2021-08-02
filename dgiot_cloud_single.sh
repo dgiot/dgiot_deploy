@@ -292,6 +292,7 @@ fi
 
 wget http://dgiot-1253666439.file.myqcloud.com/dgiot_release/dgiot_21.tar.gz -O /data/dgiot.tar.gz
 tar xf dgiot.tar.gz
+rm -rf dgiot.tar.gz
 cd  /data/dgiot
 
 count=`ps -ef |grep beam.smp |grep -v "grep" |wc -l`
